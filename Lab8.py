@@ -4,14 +4,12 @@ class BMI_health:
         self.height = float(input("ความสูงของคุณ? (เซนติเมตร): "))  # รับค่าความสูงจากผู้ใช้
         self.weight = float(input("น้ำหนักของคุณ? (กิโลกรัม): "))  # รับค่าน้ำหนักจากผู้ใช้
         self.gender = int(input("เพศของคุณ? (1 สำหรับชาย, 2 สำหรับหญิง (อย่าป้อนอย่างอื่นนอกจากนี้!)): "))  # รับค่าเพศจากผู้ใช้
-        self.calculate_bmi()  # เรียกใช้เมทอด calculate_bmi เพื่อคำนวณค่า BMI
 
     def calculate_bmi(self):
         if self.gender == 1:  # ถ้าผู้ใช้เป็นเพศชาย
             self.bmi = self.height - 110  # คำนวณค่า BMI สำหรับเพศชาย
         else:
             self.bmi = self.height - 100  # คำนวณค่า BMI สำหรับเพศหญิง
-        self.health_level()  # เรียกใช้เมทอด health_level เพื่อตรวจสุขภาพ
 
     def text_gender(self):
         if self.gender == 1:
